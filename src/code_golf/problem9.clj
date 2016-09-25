@@ -1,5 +1,13 @@
 (ns code-golf.problem9)
 
+;; http://codegolf.stackexchange.com/questions/94291/is-it-a-balanced-number
+
+;; Take a positive integer as input, and output a truthy value if it's balanced
+;; and a falsy value if it's unbalanced.
+
+;; A number is balanced if the sum of the digits on each half of the number is
+;; equal
+
 (defn balanced? [x]
   (=
    (apply + (take (int (/ (count x) 2)) x))
